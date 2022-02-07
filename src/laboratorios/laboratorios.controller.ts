@@ -10,7 +10,9 @@ import {
 import { LaboratoriosService } from './laboratorios.service';
 import { CreateLaboratorioDto } from './dto/create-laboratorio.dto';
 import { UpdateLaboratorioDto } from './dto/update-laboratorio.dto';
+import { ApiTags } from '@nestjs/swagger';
 
+@ApiTags('laboratorios')
 @Controller('laboratorios')
 export class LaboratoriosController {
   constructor(private readonly laboratoriosService: LaboratoriosService) {}
